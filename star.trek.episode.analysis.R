@@ -5,11 +5,11 @@ star.trek.episode.analysis <- function(){
      seasons.data <- get.seasons()
      
      source("data_getting_cleaning/get.season.script.R")
-     scripts <- get.seasons.script(seasons.data)
+     seasons.data.cleaned <- get.seasons.script(seasons.data)
      
      source("visualization/plot.stardate.vs.airdate.R")
-     plot.stardate.vs.airdate(seasons.data)
+     plot.stardate.vs.airdate(seasons.data.cleaned)
      
      source("visualization/plot.stardate.vs.episode.R")
-     plot.stardate.vs.episode(seasons.data)
+     plot.stardate.vs.episode(seasons.data.cleaned)
 }
